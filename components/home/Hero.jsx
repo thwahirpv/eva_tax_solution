@@ -92,7 +92,7 @@ export default function Hero() {
                         {/* Trust Badges Container */}
                         <motion.div
                             variants={itemVariants}
-                            className="mt-16 md:mt-4 px-6 rounded-lg border border-gray-100 py-4 flex flex-wrap justify-center lg:justify-start items-center gap-6 md:gap-8 opacity-95 bg-white/60 backdrop-blur-sm shadow-sm"
+                            className="mt-16 md:mt-4 px-6 rounded-sm border border-gray-100 py-4 flex flex-wrap justify-center lg:justify-start items-center gap-6 md:gap-8 opacity-95 bg-white/60 backdrop-blur-sm shadow-sm"
                         >
                             <div className="flex items-center gap-1.5 text-gray-800">
                                 <span className="text-[20px] font-bold tracking-tight">CRA</span>
