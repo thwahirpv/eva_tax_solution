@@ -1,0 +1,108 @@
+
+"use client";
+
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { Menu, X } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { cn } from "@/lib/utils";
+
+const navLinks = [
+    { name: "Services", href: "#services" },
+    { name: "About", href: "#about" },
+    { name: "Process", href: "#process" },
+    { name: "Reviews", href: "#reviews" },
+    { name: "Contact", href: "#contact" },
+];
+
+export default function Header() {
+    const [isScrolled, setIsScrolled] = useState(false);
+    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 10);
+        };
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
+    return (
+        <header
+            className={cn(
+                "fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-transparent",
+                isScrolled ? "bg-white/90 backdrop-blur-md shadow-sm border-gray-200" : "bg-white border-transparent py-4"
+            )}
+        >
+            <div className="h-[75px] pl-1 pr-3 md:px-16 flex items-center justify-between">
+                {/* Logo */}
+                <Link href="/" className="flex items-center gap-0 relative h-48 w-48">
+                    <Image
+                        src="/images/logo.png"
+                        alt="Eva Tax Solutions"
+                        fill
+                        className="object-contain object-left"
+                        priority
+                    />
+                </Link>
+
+                {/* Desktop Nav */}
+                <nav className="hidden md:flex items-center gap-8">
+                    {navLinks.map((link) => (
+                        <Link
+                            key={link.name}
+                            href={link.href}
+                            className="text-gray-600 hover:text-secondary transition-colors duration-200 font-medium text-[15px]"
+                        >
+                            {link.name}
+                        </Link>
+                    ))}
+                </nav>
+
+                {/* Desktop CTA */}
+                <div className="hidden md:block">
+                    <Button className="font-normal cursor-pointer tracking-wide bg-[#4d7c6e] hover:bg-[#3d6358] text-white rounded-sm shadow-sm px-7 font-sans">Book a Consultation</Button>
+                </div>
+
+                {/* Mobile Menu Toggle */}
+                <button
+                    className="md:hidden p-2 text-gray-600"
+                    onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                    aria-label="Toggle menu"
+                >
+                    {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                </button>
+            </div>
+
+            {/* Mobile Menu */}
+            <AnimatePresence>
+                {mobileMenuOpen && (
+                    <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: "auto" }}
+                        exit={{ opacity: 0, height: 0 }}
+                        className="md:hidden bg-white border-t border-gray-200 overflow-hidden shadow-xl"
+                    >
+                        <div className="container py-6 flex flex-col gap-4">
+                            {navLinks.map((link) => (
+                                <Link
+                                    key={link.name}
+                                    href={link.href}
+                                    className="text-lg font-medium text-gray-700 hover:text-secondary"
+                                    onClick={() => setMobileMenuOpen(false)}
+                                >
+                                    {link.name}
+                                </Link>
+                            ))}
+                            <div className="mt-4">
+                                <Button className="w-full">Book a Consultation</Button>
+                            </div>
+                        </div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+        </header>
+    );
+}

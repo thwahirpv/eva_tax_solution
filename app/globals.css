@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-montserrat), ui-sans-serif;
+  --font-serif: var(--font-playfair), ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+}
+
+/* Custom Utilities */
+@utility container {
+  margin-inline: auto;
+  padding-inline: 1rem;
+  /* mobile padding */
+  max-width: 1280px;
+  /* 1280px max width as requested */
+}
+
+@layer base {
+  :root {
+    --background: #F9FBFA;
+    --foreground: #374151;
+
+    --primary: #0F3D3E;
+    --primary-foreground: #FFFFFF;
+
+    --secondary: #63C384;
+    --secondary-foreground: #0F3D3E;
+
+    --accent: #F1FAF5;
+    --accent-foreground: #0F3D3E;
+
+    --muted: #F3F4F6;
+    --muted-foreground: #6B7280;
+
+    --card: #FFFFFF;
+    --card-foreground: #374151;
+
+    --border: #E5E7EB;
+    --input: #E5E7EB;
+    --ring: #0F3D3E;
+
+    --radius: 0.75rem;
+    /* rounded-xl */
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-serif);
+    color: var(--primary);
+  }
+}
+
+/* Custom Component Classes if needed */
