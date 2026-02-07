@@ -36,9 +36,9 @@ export default function Header() {
                 isScrolled ? "bg-white/90 backdrop-blur-md shadow-sm border-gray-200" : "bg-white border-transparent py-4"
             )}
         >
-            <div className="h-[75px] pl-1 pr-3 md:px-16 flex items-center justify-between">
+            <div className="h-[60px] pl-1 pr-3 md:px-16 flex items-center justify-between">
                 {/* Logo */}
-                <Link href="/" className="flex items-center gap-0 relative h-48 w-48">
+                <Link href="/" className="flex items-center relative h-40 w-38 md:h-38 md:w-44">
                     <Image
                         src="/images/logo.png"
                         alt="Eva Tax Solutions"

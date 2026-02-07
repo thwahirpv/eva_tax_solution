@@ -32,7 +32,7 @@ export default function Hero() {
             <div className="absolute top-0 right-0 w-full lg:w-[55%] h-full z-0">
                 <div className="relative w-full h-full">
                     {/* Gradient Overlay: Vertical for Mobile, Horizontal for Desktop */}
-                    <div className="absolute inset-0 bg-gradient-to-b from-white/95 via-white/90 to-transparent lg:bg-gradient-to-r lg:from-white lg:via-white/80 lg:to-transparent z-10" />
+                    <div className="absolute inset-0 bg-gradient-to-b from-white/95 via-white/90 to-transparent lg:bg-gradient-to-r lg:from-white lg:via-white/20 lg:to-transparent z-10" />
 
                     {/* Desktop Image */}
                     <Image
@@ -66,7 +66,7 @@ export default function Hero() {
                     >
                         <motion.h1
                             variants={itemVariants}
-                            className="text-[34px] md:text-[44px] lg:text-[64px] leading-[1.15] font-bold text-primary font-serif tracking-tight mt-4 lg:mt-0 text-center lg:text-left"
+                            className="text-[34px] md:text-[40px] lg:text-[50px] leading-[1.15] font-medium text-primary font-serif tracking-normal mt-4 lg:mt-2 text-center lg:text-left"
                         >
                             Maximized Refunds. <br />
                             Simplified Taxes for <br />
@@ -83,7 +83,7 @@ export default function Hero() {
                         <motion.div variants={itemVariants} className="pt-2">
                             <Button
                                 size="lg"
-                                className="font-sans cursor-pointer text-[14px] md:text-[16px] font-normal  px-5 py-3 md:px-8 md:py-6 h-auto shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all bg-[#4d7c6e] hover:bg-[#3d6358] text-white rounded-md"
+                                className="font-sans cursor-pointer text-[14px] md:text-[16px] font-normal px-5 py-3 md:px-7 md:py-3 h-auto shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all bg-[#4d7c6e] hover:bg-[#3d6358] text-white rounded-sm"
                             >
                                 Book a Consultation
                             </Button>
@@ -92,7 +92,7 @@ export default function Hero() {
                         {/* Trust Badges Container */}
                         <motion.div
                             variants={itemVariants}
-                            className="mt-16 md:mt-4 px-6 rounded-lg border border-gray-100/50 py-4 flex flex-wrap justify-center lg:justify-start items-center gap-6 md:gap-8 opacity-95 bg-white/60 backdrop-blur-sm shadow-sm"
+                            className="mt-16 md:mt-4 px-6 rounded-lg border border-gray-100 py-4 flex flex-wrap justify-center lg:justify-start items-center gap-6 md:gap-8 opacity-95 bg-white/60 backdrop-blur-sm shadow-sm"
                         >
                             <div className="flex items-center gap-1.5 text-gray-800">
                                 <span className="text-[20px] font-bold tracking-tight">CRA</span>
