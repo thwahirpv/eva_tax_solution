@@ -34,13 +34,13 @@ const services = [
 
 export default function Services() {
     return (
-        <section id="services" className="py-16 md:py-24 bg-[#F1FAF5]">
-            <div className="container px-4">
+        <section id="services" className="py-16 md:py-16 lg:py-24 pb-32 bg-[#F1FAF5]">
+            <div className="container px-6 lg:px-12">
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-4xl font-bold font-serif text-primary mb-4">
                         Our Tax Services
                     </h2>
-                    <p className="text-gray-600 max-w-2xl mx-auto">
+                    <p className="text-gray-600 max-w-2xl mx-auto leading-relaxed">
                         Comprehensive solutions for all your tax filing needs. Simple, stress-free tax filing in just three steps.
                     </p>
                 </div>
@@ -53,21 +53,20 @@ export default function Services() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
-                            whileHover={{ y: -5, boxShadow: "0 10px 30px -10px rgba(0,0,0,0.1)" }}
-                            className="bg-white rounded-xl p-8 border border-gray-100 shadow-sm hover:border-secondary/20 transition-all duration-300"
+                            className="bg-white rounded-xl p-8 border border-gray-100 shadow-sm hover:border-secondary/20 hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 h-full flex flex-col items-center text-center md:items-start md:text-left"
                         >
-                            <div className="mb-6 p-3 bg-green-50 rounded-full w-fit">
+                            <div className="mb-6 w-16 h-16 flex items-center justify-center bg-green-50 rounded-full">
                                 {service.icon}
                             </div>
                             <h3 className="text-xl font-bold text-primary mb-3">
                                 {service.title}
                             </h3>
-                            <p className="text-gray-600 mb-6 text-sm leading-relaxed">
+                            <p className="text-gray-600 mb-6 text-sm leading-relaxed grow">
                                 {service.description}
                             </p>
                             <Link
                                 href={service.href}
-                                className="inline-flex items-center text-sm font-medium text-primary hover:text-secondary group transition-colors"
+                                className="mt-auto inline-flex items-center py-2 px-3 text-sm font-medium text-primary hover:text-secondary group transition-colors"
                             >
                                 Learn More
                                 <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />

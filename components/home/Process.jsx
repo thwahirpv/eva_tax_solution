@@ -55,7 +55,13 @@ export default function Process() {
 
                 <div className="relative">
                     {/* Connector Line (Desktop Only) */}
-                    <div className="absolute top-12 left-[16%] right-[16%] h-0.5 bg-gray-200 hidden lg:block z-0" />
+                    <motion.div
+                        initial={{ scaleX: 0 }}
+                        whileInView={{ scaleX: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: .2, duration: 1.5, ease: "easeInOut" }}
+                        className="absolute top-12 left-[16%] right-[16%] h-0.5 bg-gray-200 hidden lg:block z-0 origin-left"
+                    />
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-12 relative z-10">
                         {steps.map((step, index) => (

@@ -1,32 +1,37 @@
 
 import Link from "next/link";
+import Image from "next/image";
 import { Mail, Phone, MapPin } from "lucide-react";
 
 export default function Footer() {
     return (
-        <footer className="bg-primary text-white/80 pt-16 pb-8">
-            <div className="container px-4">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        <footer className="bg-primary text-white/80 pt-16 pb-20 md:pb-8 px-6">
+            <div className="max-w-7xl mx-auto">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12 items-start">
 
                     {/* Brand Column */}
-                    <div className="space-y-4">
-                        <div className="flex items-center gap-2 mb-4">
-                            {/* Logo Placeholder */}
-                            <div className="h-8 w-8 bg-white/10 rounded-full flex items-center justify-center text-secondary font-bold">E</div>
-                            <span className="text-2xl font-bold text-white font-serif">Eva Tax</span>
-                        </div>
-                        <p className="text-sm leading-relaxed max-w-xs">
+                    <div className="flex flex-col items-start gap-6">
+                        <Link href="/" className="flex items-center h-16">
+                            <Image
+                                src="/images/logo_2.png"
+                                alt="Eva Tax Solutions"
+                                width={180}
+                                height={60}
+                                className="h-16 md:h-16 lg:h-18 w-auto object-contain -ml-1 md:-ml-1 lg:-ml-2 transition-all"
+                            />
+                        </Link>
+                        <p className=" leading-relaxed text-sm max-w-[280px] text-left">
                             Trusted, CRA-certified tax experts focused on maximizing your refunds and ensuring financial peace of mind.
                         </p>
                     </div>
 
                     {/* Quick Links */}
                     <div>
-                        <h3 className="text-white font-bold mb-6">Quick Links</h3>
+                        <h4 className="font-bold mb-6 text-white uppercase tracking-wider text-xs">Quick Links</h4>
                         <ul className="space-y-3 text-sm">
                             {['Services', 'About Us', 'The Process', 'Testimonials'].map((item) => (
                                 <li key={item}>
-                                    <Link href="#" className="hover:text-secondary transition-colors">
+                                    <Link href="#" className="hover:text-white transition-colors">
                                         {item}
                                     </Link>
                                 </li>
@@ -36,11 +41,11 @@ export default function Footer() {
 
                     {/* Services */}
                     <div>
-                        <h3 className="text-white font-bold mb-6">Services</h3>
+                        <h4 className="font-bold mb-6 text-white uppercase tracking-wider text-xs">Services</h4>
                         <ul className="space-y-3 text-sm">
                             {['Personal Tax', 'Corporate Tax', 'GST/HST Filing', 'Bookkeeping'].map((item) => (
                                 <li key={item}>
-                                    <Link href="#" className="hover:text-secondary transition-colors">
+                                    <Link href="#" className="hover:text-white transition-colors">
                                         {item}
                                     </Link>
                                 </li>
@@ -50,26 +55,30 @@ export default function Footer() {
 
                     {/* Contact */}
                     <div>
-                        <h3 className="text-white font-bold mb-6">Contact</h3>
-                        <ul className="space-y-4 text-sm">
+                        <h4 className="font-bold mb-6 text-white uppercase tracking-wider text-xs">Contact</h4>
+                        <ul className="space-y-4  text-sm">
                             <li className="flex items-center gap-3">
-                                <Phone className="w-4 h-4 text-secondary" />
-                                <span>(705) 555-9990</span>
+                                <Phone className="w-5 h-5 text-emerald-400" />
+                                <a href="tel:7055559990" className="hover:text-white transition-colors">(705) 555-9990</a>
                             </li>
                             <li className="flex items-center gap-3">
-                                <Mail className="w-4 h-4 text-secondary" />
-                                <span>info@evataxsolutions.ca</span>
+                                <Mail className="w-5 h-5 text-emerald-400" />
+                                <a href="mailto:info@evataxsolutions.ca" className="hover:text-white transition-colors">info@evataxsolutions.ca</a>
                             </li>
                             <li className="flex items-start gap-3">
-                                <MapPin className="w-4 h-4 text-secondary mt-1" />
+                                <MapPin className="w-5 h-5 text-emerald-400 mt-1" />
                                 <span>123 Main St. Toronto, ON M1H 2Y1</span>
                             </li>
                         </ul>
                     </div>
                 </div>
 
-                <div className="border-t border-white/10 pt-8 text-center text-xs">
+                <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
                     <p>&copy; {new Date().getFullYear()} Eva Tax Solutions. All rights reserved.</p>
+                    <div className="flex gap-6">
+                        <Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link>
+                        <Link href="#" className="hover:text-white transition-colors">Terms of Service</Link>
+                    </div>
                 </div>
             </div>
         </footer>
