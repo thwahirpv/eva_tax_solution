@@ -29,10 +29,15 @@ export default function Footer() {
                     <div>
                         <h4 className="font-bold mb-6 text-white uppercase tracking-wider text-xs">Quick Links</h4>
                         <ul className="space-y-3 text-sm">
-                            {['Services', 'About Us', 'The Process', 'Testimonials'].map((item) => (
-                                <li key={item}>
-                                    <Link href="#" className="hover:text-white transition-colors">
-                                        {item}
+                            {[
+                                { name: 'Services', href: '/#services' },
+                                { name: 'About Us', href: '/#about' },
+                                { name: 'The Process', href: '/#process' },
+                                { name: 'Testimonials', href: '/#reviews' }
+                            ].map((item) => (
+                                <li key={item.name}>
+                                    <Link href={item.href} className="hover:text-white transition-colors">
+                                        {item.name}
                                     </Link>
                                 </li>
                             ))}
@@ -43,10 +48,15 @@ export default function Footer() {
                     <div>
                         <h4 className="font-bold mb-6 text-white uppercase tracking-wider text-xs">Services</h4>
                         <ul className="space-y-3 text-sm">
-                            {['Personal Tax', 'Corporate Tax', 'GST/HST Filing', 'Bookkeeping'].map((item) => (
-                                <li key={item}>
-                                    <Link href="#" className="hover:text-white transition-colors">
-                                        {item}
+                            {[
+                                { name: 'Personal Tax', href: '/#personal-tax' },
+                                { name: 'Corporate Tax', href: '/#corporate-tax' },
+                                { name: 'GST/HST Filing', href: '/#gst-hst-filing' },
+                                { name: 'Self Employed Tax', href: '/#self-employed-tax' }
+                            ].map((item) => (
+                                <li key={item.name}>
+                                    <Link href={item.href} className="hover:text-white transition-colors">
+                                        {item.name}
                                     </Link>
                                 </li>
                             ))}
@@ -57,28 +67,28 @@ export default function Footer() {
                     <div>
                         <h4 className="font-bold mb-6 text-white uppercase tracking-wider text-xs">Contact</h4>
                         <ul className="space-y-4  text-sm">
-                            <li className="flex items-center gap-3">
+                            <li className="flex items-center gap-3 cursor-pointer">
                                 <Phone className="w-5 h-5 text-emerald-400" />
-                                <a href="tel:7055559990" className="hover:text-white transition-colors">(705) 555-9990</a>
+                                <a href="tel:226-678-7903" className="hover:text-white transition-colors">226-678-7903</a>
                             </li>
-                            <li className="flex items-center gap-3">
+                            <li className="flex items-center gap-3 cursor-pointer">
                                 <Mail className="w-5 h-5 text-emerald-400" />
                                 <a href="mailto:info@evataxsolutions.ca" className="hover:text-white transition-colors">info@evataxsolutions.ca</a>
                             </li>
                             <li className="flex items-start gap-3">
                                 <MapPin className="w-5 h-5 text-emerald-400 mt-1" />
-                                <span>123 Main St. Toronto, ON M1H 2Y1</span>
+                                <span>5498 shorecrest crescent Mississauga, Ontario, Canada</span>
                             </li>
                         </ul>
                     </div>
                 </div>
 
-                <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
+                <div className="border-t border-white/10 pt-8 flex justify-center items-center text-xs">
                     <p>&copy; {new Date().getFullYear()} Eva Tax Solutions. All rights reserved.</p>
-                    <div className="flex gap-6">
+                    {/* <div className="flex gap-6">
                         <Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link>
                         <Link href="#" className="hover:text-white transition-colors">Terms of Service</Link>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </footer>

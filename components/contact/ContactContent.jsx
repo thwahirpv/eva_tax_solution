@@ -183,8 +183,8 @@ export default function ContactContent() {
                                     </motion.div>
                                     <div>
                                         <h3 className="font-bold text-gray-900 mb-1">Phone</h3>
-                                        <a href="tel:7055559990" className="text-gray-600 hover:text-[#63C384] transition-colors">
-                                            (705) 555-9990
+                                        <a href="tel:226-678-7903" className="text-gray-600 hover:text-[#63C384] transition-colors">
+                                            226-678-7903
                                         </a>
                                     </div>
                                 </div>
@@ -210,8 +210,8 @@ export default function ContactContent() {
                                     <div>
                                         <h3 className="font-bold text-gray-900 mb-1">Office</h3>
                                         <p className="text-gray-600 leading-relaxed">
-                                            123 Main St.<br />
-                                            Toronto, ON M1H 2Y1
+                                            5498 shorecrest crescent.<br />
+                                            Mississauga, Ontario, Canada
                                         </p>
                                     </div>
                                 </div>
@@ -372,7 +372,7 @@ export default function ContactContent() {
                         </h2>
                         <div className="w-full h-72 md:h-80 lg:h-96 rounded-2xl overflow-hidden shadow-sm border border-[#E5E7EB]">
                             <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2880.887648358245!2d-79.25301542381283!3d43.77535797109538!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4d1a0e1040001%3A0x1000000000000000!2sToronto%2C%20ON!5e0!3m2!1sen!2sca!4v1700000000000!5m2!1sen!2sca"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2890.0807247393745!2d-79.70849792400158!3d43.58403487110545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b41aff8a4cd15%3A0x9c325ad3026d96!2s5498%20Shorecrest%20Crescent%2C%20Mississauga%2C%20ON%20L5M%204Y6%2C%20Canada!5e0!3m2!1sen!2sin!4v1770693374917!5m2!1sen!2sin"
                                 width="100%"
                                 height="100%"
                                 style={{ border: 0 }}

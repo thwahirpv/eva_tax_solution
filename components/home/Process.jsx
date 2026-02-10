@@ -75,7 +75,7 @@ export default function Process() {
                             >
                                 <motion.div
                                     animate={floatAnimation}
-                                    className="w-24 h-24 bg-primary rounded-full flex items-center justify-center mb-6 shadow-lg shadow-primary/20 relative"
+                                    className="w-20 h-20 md:w-22 md:h-22  bg-primary rounded-full flex items-center justify-center mb-6 shadow-lg shadow-primary/20 relative"
                                 >
                                     {step.icon}
                                     <div className="absolute -top-2 -right-2 w-8 h-8 bg-secondary rounded-full flex items-center justify-center text-primary font-bold border-2 border-white">
