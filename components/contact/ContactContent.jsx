@@ -183,7 +183,7 @@ export default function ContactContent() {
                                     </motion.div>
                                     <div>
                                         <h3 className="font-bold text-gray-900 mb-1">Phone</h3>
-                                        <a href="tel:226-678-7903" className="text-gray-600 hover:text-[#63C384] transition-colors">
+                                        <a href="https://wa.me/12266787903" className="text-gray-600 hover:text-[#63C384] transition-colors" target="_blank" rel="noopener noreferrer">
                                             226-678-7903
                                         </a>
                                     </div>
