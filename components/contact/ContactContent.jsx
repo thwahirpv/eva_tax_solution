@@ -147,7 +147,7 @@ export default function ContactContent() {
                                     size="lg"
                                     className="font-sans cursor-pointer text-[14px] md:text-[16px] font-normal px-8 py-3 h-auto shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 bg-[#4d7c6e] hover:bg-[#3d6358] text-white rounded-sm"
                                 >
-                                    <a href="#contact-form">
+                                    <a href="https://wa.me/12266787903" target="_blank">
                                         Message Us
                                     </a>
                                 </Button>
@@ -226,9 +226,8 @@ export default function ContactContent() {
                                     <div>
                                         <h3 className="font-bold text-gray-900 mb-1">Office Hours</h3>
                                         <p className="text-gray-600 text-sm">
-                                            Monday - Friday: 9:00 AM - 6:00 PM<br />
-                                            Saturday: 10:00 AM - 4:00 PM<br />
-                                            Sunday: Closed
+                                            Monday - Friday: 9:00 AM - 9:00 PM<br />
+                                            Saturday & Sunday: 10:00 AM - 6:00 PM<br />
                                         </p>
                                     </div>
                                 </div>

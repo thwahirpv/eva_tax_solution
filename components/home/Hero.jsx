@@ -78,7 +78,7 @@ export default function Hero() {
                             variants={itemVariants}
                             className="text-lg md:text-xl text-[#374151] max-w-[480px] leading-relaxed font-sans font-medium text-center lg:text-left"
                         >
-                            Trusted, CPA-certified tax experts. Serving individuals and businesses across Toronto, Ontario and all of Canada.
+                            Trusted, CPA-certified tax experts. Serving individuals and businesses across GTA, Ontario and all of Canada.
                         </motion.p>
 
                         <motion.div variants={itemVariants} className="pt-2 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
