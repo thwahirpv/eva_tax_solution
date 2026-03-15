@@ -8,7 +8,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 export async function POST(request) {
     try {
         const body = await request.json();
-        const { name, email, phone, message } = body;
+        const { name, email, phone, promoCode, message } = body;
 
         // 1. Basic Validation
         if (!name || !email || !message) {
@@ -74,6 +74,9 @@ export async function POST(request) {
                 
                 <div class="label">Phone</div>
                 <div class="value">${phone || '<span style="color:#9CA3AF; font-style:italic;">Not provided</span>'}</div>
+                
+                <div class="label">Promo Code</div>
+                <div class="value">${promoCode || '<span style="color:#9CA3AF; font-style:italic;">Not provided</span>'}</div>
                 
                 <div class="label">Message</div>
                 <div class="message-box">${message}</div>

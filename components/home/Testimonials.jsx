@@ -11,7 +11,7 @@ const testimonials = [
         rating: 5,
     },
     {
-        name: "Sarah T.",
+        name: "Farhan VP",
         review: "Quick, caring, and tax time gone vary easy. The best experience I've had filing taxes.",
         rating: 5,
     },

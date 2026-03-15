@@ -30,10 +30,10 @@ export default function Footer() {
                         <h4 className="font-bold mb-6 text-white uppercase tracking-wider text-xs">Quick Links</h4>
                         <ul className="space-y-3 text-sm">
                             {[
-                                { name: 'Services', href: '/#services' },
                                 { name: 'About Us', href: '/#about' },
-                                { name: 'The Process', href: '/#process' },
-                                { name: 'Testimonials', href: '/#reviews' }
+                                { name: 'Services', href: '/#services' },
+                                { name: 'Process', href: '/#process' },
+                                { name: 'Reviews', href: '/#reviews' }
                             ].map((item) => (
                                 <li key={item.name}>
                                     <Link href={item.href} className="hover:text-white transition-colors">

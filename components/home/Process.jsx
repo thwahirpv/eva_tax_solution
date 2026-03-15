@@ -2,14 +2,15 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { UploadCloud, FileCheck, Send } from "lucide-react";
+import { UploadCloud, FileCheck, Send, CalendarCheck } from "lucide-react";
+import Link from "next/link";
 
 const steps = [
     {
         id: 1,
-        title: "Upload Documents",
-        description: "Securely upload your tax slips and receipts to our encrypted portal.",
-        icon: <UploadCloud className="w-8 h-8 text-white" />,
+        title: "Book a Consultation",
+        description: "Schedule a quick call to discuss your needs and get a personalized price quote.",
+        icon: <CalendarCheck className="w-8 h-8 text-white" />,
     },
     {
         id: 2,
@@ -73,22 +74,50 @@ export default function Process() {
                                 transition={{ delay: index * 0.2 }}
                                 className="flex flex-col items-center"
                             >
-                                <motion.div
-                                    animate={floatAnimation}
-                                    className="w-20 h-20 md:w-22 md:h-22  bg-primary rounded-full flex items-center justify-center mb-6 shadow-lg shadow-primary/20 relative"
-                                >
-                                    {step.icon}
-                                    <div className="absolute -top-2 -right-2 w-8 h-8 bg-secondary rounded-full flex items-center justify-center text-primary font-bold border-2 border-white">
-                                        {step.id}
-                                    </div>
-                                </motion.div>
+                                {step.id === 1 ? (
+                                    <div className="flex flex-col items-center group">
+                                        <Link href="/contact" className="cursor-pointer">
+                                            <motion.div
+                                                animate={floatAnimation}
+                                                className="w-20 h-20 md:w-22 md:h-22 bg-primary rounded-full flex items-center justify-center mb-6 shadow-lg shadow-primary/20 relative transition-transform duration-300 group-hover:scale-105"
+                                            >
+                                                {step.icon}
+                                                <div className="absolute -top-2 -right-2 w-8 h-8 bg-secondary rounded-full flex items-center justify-center text-primary font-bold border-2 border-white">
+                                                    {step.id}
+                                                </div>
+                                            </motion.div>
+                                        </Link>
 
-                                <h3 className="text-xl font-bold text-primary mb-3">
-                                    {step.title}
-                                </h3>
-                                <p className="text-gray-600 max-w-xs mx-auto leading-relaxed text-sm">
-                                    {step.description}
-                                </p>
+                                        <Link href="/contact" className="cursor-pointer">
+                                            <h3 className="text-xl font-bold text-primary mb-3 hover:text-secondary transition-colors duration-300">
+                                                {step.title}
+                                            </h3>
+                                        </Link>
+
+                                        <p className="text-gray-600 max-w-xs mx-auto leading-relaxed text-sm">
+                                            {step.description}
+                                        </p>
+                                    </div>
+                                ) : (
+                                    <>
+                                        <motion.div
+                                            animate={floatAnimation}
+                                            className="w-20 h-20 md:w-22 md:h-22  bg-primary rounded-full flex items-center justify-center mb-6 shadow-lg shadow-primary/20 relative"
+                                        >
+                                            {step.icon}
+                                            <div className="absolute -top-2 -right-2 w-8 h-8 bg-secondary rounded-full flex items-center justify-center text-primary font-bold border-2 border-white">
+                                                {step.id}
+                                            </div>
+                                        </motion.div>
+
+                                        <h3 className="text-xl font-bold text-primary mb-3">
+                                            {step.title}
+                                        </h3>
+                                        <p className="text-gray-600 max-w-xs mx-auto leading-relaxed text-sm">
+                                            {step.description}
+                                        </p>
+                                    </>
+                                )}
                             </motion.div>
                         ))}
                     </div>

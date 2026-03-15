@@ -41,7 +41,7 @@ export const metadata = {
     ],
   },
   icons: {
-    icon: "/images/tab_logo.svg",
+    icon: "/images/t_logo.svg",
   },
 };
 
