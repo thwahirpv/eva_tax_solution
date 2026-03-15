@@ -33,12 +33,18 @@ export const metadata = {
     type: "website",
     images: [
       {
-        url: "/images/tab_logo.svg", // Using the tab logo as explicitly requested for SEO
-        width: 800,
-        height: 600,
-        alt: "Eva Tax Solutions Logo",
+        url: "/images/og-main.png",
+        width: 1200,
+        height: 630,
+        alt: "Eva Tax Solutions - Canadian Tax Services",
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Eva Tax Solutions | Canadian Tax Experts",
+    description: "Professional Canadian tax services including T1, T2, and GST/HST filing.",
+    images: ["/images/og-main.png"],
   },
   icons: {
     icon: "/images/t_logo.svg",
